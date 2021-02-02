@@ -14,15 +14,12 @@ using namespace std;
 
 int main()
 {
-    ifstream in;  //input file variable
+    ifstream in;  
     
-    //Creates a vector of Prompt objects
     vector<Prompt> prompt;
     
-    //Makes Prompt object
     Prompt p = Prompt();
     
-    //Opens the game input file
     in.open("Game.txt"); 
       
     //Uses current time as seed for random generator 
@@ -34,6 +31,7 @@ int main()
         prompt.push_back(p);
         in >> p; 
     }
+    
     //Plays the game until the user is done 
     int choice = 0;  
     cout << prompt[choice];   //prints out the first prompt
